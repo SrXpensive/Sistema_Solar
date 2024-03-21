@@ -16,7 +16,21 @@ public class Planeta extends Astro{
     };
     @Override
     public void muestraDatos() {
-
+        System.out.println("Planeta: "+getNombre());
+        System.out.println("Radio: "+getRadio());
+        System.out.println("Masa: "+getMasa());
+        System.out.println("Densidad: "+getDensidad());
+        System.out.println("Rotación: "+getRotacion());
+        System.out.println("Temperatura: "+getTemperatura());
+        System.out.println("Gravedad: "+getGravedad());
+        if (getSatelites().isEmpty()){
+            System.out.println("No tiene satélites");
+        }else{
+            System.out.println("Satélites: ");
+            for(int i = 0; i < getSatelites().size(); i++){
+                System.out.println(getSatelites().get(i).getNombre());
+            }
+        }
     }
     public String toString(){
         return "Nombre: "+this.getNombre()+"\n Masa: "+this.getMasa()+"\n Radio: "+this.getRadio()+"\n Distancia al Sol: "+this.getDistancia_sol();

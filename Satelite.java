@@ -40,7 +40,14 @@ public class Satelite extends Astro{
 
     @Override
     public void muestraDatos() {
-
+        System.out.println("Satélite:"+getNombre());
+        System.out.println("Radio: "+getRadio());
+        System.out.println("Masa: "+getMasa());
+        System.out.println("Densidad: "+getDensidad());
+        System.out.println("Rotación: "+getRotacion());
+        System.out.println("Temperatura: "+getTemperatura());
+        System.out.println("Gravedad: "+getGravedad());
+        System.out.println("Planeta al que pertenece: "+getPlaneta().getNombre());
     }
 
     @Override
