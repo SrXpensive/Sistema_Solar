@@ -10,7 +10,10 @@ public class Planeta extends Astro{
         this.distancia_sol = distancia_sol;
         this.orbita = orbita;
     }
-    public Planeta(){};
+    public Planeta(){
+        super();
+        satelites = new ArrayList<>();
+    };
     @Override
     public void muestraDatos() {
 

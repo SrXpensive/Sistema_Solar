@@ -9,7 +9,10 @@ public class Satelite extends Astro{
         this.orbita = orbita;
         this.planeta = planeta;
     }
-    public Satelite(){};
+    public Satelite(){
+        super();
+        planeta = new Planeta();
+    };
 
     public double getDistancia_planeta() {
         return distancia_planeta;
