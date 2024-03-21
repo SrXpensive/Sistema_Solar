@@ -1,7 +1,9 @@
+import java.util.ArrayList;
+
 public class Planeta extends Astro{
     private double distancia_sol;
     private double orbita;
-    private Satelite[] satelites;
+    private ArrayList<Satelite> satelites;
 
     public Planeta(String nombre, double radio, double masa, double densidad, double rotacion, double temperatura, double gravedad, double distancia_sol, double orbita) {
         super(nombre, radio, masa, densidad, rotacion, temperatura, gravedad);
@@ -13,7 +15,9 @@ public class Planeta extends Astro{
     public void muestraDatos() {
 
     }
-
+    public String toString(){
+        return "Nombre: "+this.getNombre()+"\n Masa: "+this.getMasa()+"\n Radio: "+this.getRadio()+"\n Distancia al Sol: "+this.getDistancia_sol();
+    }
     @Override
     public double pesoEnSuperficie(double m) {
         return m*(G*getMasa()/Math.pow(getRadio(),2));
@@ -35,11 +39,8 @@ public class Planeta extends Astro{
         this.orbita = orbita;
     }
 
-    public Satelite[] getSatelites() {
-        return satelites;
-    }
-
-    public void setSatelites(Satelite[] satelites) {
+    public ArrayList<Satelite> getSatelites() {return satelites;}
+    public void setSatelites(ArrayList<Satelite> satelites) {
         this.satelites = satelites;
     }
 }
