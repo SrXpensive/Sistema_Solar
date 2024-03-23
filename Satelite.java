@@ -40,18 +40,21 @@ public class Satelite extends Astro{
 
     @Override
     public void muestraDatos() {
-        System.out.println("Satélite:"+getNombre());
-        System.out.println("Radio: "+getRadio());
-        System.out.println("Masa: "+getMasa());
-        System.out.println("Densidad: "+getDensidad());
-        System.out.println("Rotación: "+getRotacion());
-        System.out.println("Temperatura: "+getTemperatura());
-        System.out.println("Gravedad: "+getGravedad());
-        System.out.println("Planeta al que pertenece: "+getPlaneta().getNombre());
+        System.out.println("Satélite: "+this.getNombre());
+        System.out.println("Radio: "+this.getRadio());
+        System.out.println("Masa: "+this.getMasa());
+        System.out.println("Densidad: "+this.getDensidad());
+        System.out.println("Rotación: "+this.getRotacion());
+        System.out.println("Temperatura: "+this.getTemperatura());
+        System.out.println("Gravedad: "+this.getGravedad());
+        System.out.println("Planeta al que pertenece: "+this.getPlaneta().getNombre());
     }
 
     @Override
     public double pesoEnSuperficie(double m) {
         return m*getGravedad();
+    }
+    public String toString(){
+        return "Nombre: "+this.getNombre()+"\n Masa: "+this.getMasa()+"\n Radio: "+this.getRadio()+"\n Distancia al Planeta: "+this.getDistancia_planeta();
     }
 }
